@@ -1,4 +1,12 @@
 # Mysql + Phpmyadmin
 
-- mysql port : 3333
-- phpmyadmin port : 8888
+## mysql 
+
+- **port** : 8888
+- **username** : root
+- **password** : 
+- **database** : demo
+
+## phpmyadmin
+
+- **port** : 8888
