@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  php-apache:
+    container_name: docker_php_apache
+    build: ./php-apache
+    #    image: php:8.0.0-apache
+    restart: always
+    ports:
+      - 1234:80
+      - 443:443
+    volumes:
+      - ./laravel_project:/var/www/html
