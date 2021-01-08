@@ -24,6 +24,8 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
       MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: demo
+    volumes:
+      - ./mysql-volumes:/var/lib/mysql
 
   phpmyadmin:
     depends_on:
