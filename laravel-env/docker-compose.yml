@@ -38,3 +38,19 @@ services:
     environment:
       PMA_HOST: mysql_db
 
+  redis_db:
+    container_name: 'docker_redis'
+    image: library/redis:6.0.9
+    restart: always
+    ports:
+      - '6666:6379'
+  phpredisadmin:
+    container_name: docker_phpredisadmin
+    image: erikdubbelboer/phpredisadmin
+    restart: always
+    depends_on:
+      - redis_db
+    ports:
+      - '8889:80'
+    environment:
+      REDIS_1_HOST: redis_db
